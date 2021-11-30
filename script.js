@@ -96,12 +96,28 @@ let playGame = () => {
     nextLevel();
 }
 
+
 //eventos de clique para as cores
 green.onclick = () => click(0);
 red.onclick = () => click(1);
 yellow.onclick = () => click(2);
 blue.onclick = () => click(3);
 
+
+document.addEventListener("keydown", function(e) {
+    if(e.key === "u") {
+        click(0)
+    }
+    if(e.key === "i") {
+        click(1)
+    }
+    if(e.key === "j") {
+        click(2)
+    }
+    if(e.key === "k") {
+        click(3)
+    }
+})
 
 //inicio do jogo
 playGame();
